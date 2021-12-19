@@ -1,0 +1,133 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.17);
+    padding: 0px 25px;
+}
+
+.header-links {
+    display: flex;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+.header-link-item {
+    padding: 0 15px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    color: #afafaf;
+    text-align: center;
+}
+
+.header-link-item.active {
+    font-weight: bold;
+    color: #5bc2a8;
+    margin-bottom: 0px;
+    border-bottom: 3px solid #5bc2a8;
+}
+
+.header-discover-link {
+    margin-top: 4px;
+}
+
+.header-cta-buttons {
+    display: flex;
+}
+
+.header-cta {
+    padding: 10px 16px;
+    margin-right: 25px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 5px rgba(20, 150, 123, 0.08);
+}
+
+.header-cta:last-child {
+    margin-right: 0;
+}
+
+.btn-border {
+    border: 1px solid #afafaf;
+    color: #14967b;
+}
+
+.btn-fill {
+    background: #14967b;
+    color: white;
+}
+
+[role="button"] {
+    cursor: pointer;
+}
+
+.header-mweb-container {
+    display: none;
+}
+
+.header-mweb-menu {
+    display: none;
+}
+
+
+/* ===== Mobile ===== */
+
+@media (max-width: 426px) {
+    .header-container {
+        justify-content: center;
+        padding: 20px;
+    }
+    .header-links,
+    .header-cta-buttons {
+        display: none;
+    }
+    .header-mweb-parent-container {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 10;
+        transform: translateX(-100%);
+        transition: transform 0.3s;
+    }
+    .header-mweb-parent-container.show {
+        transform: translateX(0px);
+    }
+    .header-mweb-container {
+        background-color: white;
+        display: block;
+        position: fixed;
+        top: 0px;
+        left: 0;
+        right: 40vw;
+        bottom: 0;
+    }
+    .header-mweb-container>* {
+        display: block;
+    }
+    .header-mweb-menu {
+        display: block;
+        position: absolute;
+        left: 20px;
+    }
+    .header-link-item {
+        font-size: 22px;
+    }
+    .header-cta-buttons {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .header-cta,
+    .header-cta:last-child {
+        margin: 10px 15px;
+        text-align: center;
+        font-size: 22px;
+    }
+}
